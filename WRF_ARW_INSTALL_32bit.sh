@@ -46,8 +46,6 @@ export CC=gcc
 export CXX=g++
 export FC=gfortran
 export F77=gfortran
-export FCFLAGS='-m64'
-export FFLAGS='-m64'
 
 #############################zlib############################
 cd $HOME/WRF/Downloads
