@@ -12,7 +12,7 @@
 #############################basic package managment############################
 sudo apt update                                                                                                   
 sudo apt upgrade                                                                                                    
-sudo apt install gcc gfortran g++ libtool automake autoconf make m4 default-jre default-jdk csh ksh git ncview ncl-ncarg m4 build-essential nasm cmake unzip libxmu-dev libcairo-dev libbz2-dev libxaw7-dev libx11-dev xorg-dev flex bison byacc   
+sudo apt install gcc gfortran g++ libtool automake autoconf make m4 default-jre default-jdk csh ksh git ncview ncl-ncarg   
 
 ##############################Directory Listing############################
 export HOME=`cd;pwd`
@@ -180,6 +180,28 @@ export NETCDF=$DIR/NETCDF
 ./configure  
 sed -i -e 's/-C -P/-P/g' $HOME/WRF/ARWpost/configure.arwp
 ./compile
+
+
+################################ OpenGrADS ##################################
+#Verison 2.2.1 32bit of Linux
+#############################################################################
+cd $HOME/WRFCHEM/Downloads
+tar -xzvf opengrads-2.2.1.oga.1-bundle-i686-pc-linux-gnu-glibc_2.12.tar.gz -C $HOME/WRFCHEM
+cd $HOME/WRFCHEM
+mv $HOME/WRFCHEM/opengrads-2.2.1.oga.1  $HOME/WRFCHEM/GrADS
+cd GrADS/Contents
+wget -c ftp://ftp.cpc.ncep.noaa.gov/wd51we/g2ctl/g2ctl
+chmod +x g2ctl
+wget -c https://sourceforge.net/projects/opengrads/files/wgrib2/0.1.9.4/wgrib2-v0.1.9.4-bin-i686-glib2.5-linux-gnu.tar.gz
+tar -xzvf wgrib2-v0.1.9.4-bin-i686-glib2.5-linux-gnu.tar.gz
+cd wgrib2-v0.1.9.4/bin
+mv wgrib2 $HOME/WRFCHEM/GrADS/Contents
+cd $HOME/WRFCHEM/GrADS/Contents
+rm wgrib2-v0.1.9.4-bin-i686-glib2.5-linux-gnu.tar.gz
+rm -r wgrib2-v0.1.9.4
+
+
+export PATH=$HOME/WRFCHEM/GrADS/Contents:$PATH
 
 
 
