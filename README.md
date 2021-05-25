@@ -16,6 +16,7 @@ chmod +x WRF_ARW_INSTALL.sh
 I have provided comments on what the script is doing and information on configuration files.
 
 # WRF installation with parallel process.
+## Must be installed with GNU compiler, it will not work with other compilers.
 
 Download and install required library and data files for WRF.
 
@@ -23,7 +24,7 @@ Tested in Ubuntu
 
 Built in 34-bit system
 
-Tested with current available libraries on 03/15/2021
+Tested with current available libraries on 05/25/2021
 
 If newer libraries exist edit script paths for changes
 
