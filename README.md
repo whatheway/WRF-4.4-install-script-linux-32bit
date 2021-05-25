@@ -1,4 +1,4 @@
-# WRF-4.2.2-install-script-32bit
+# WRF-4.3-install-script-32bit
 
 This is a script that installs all the libararies, software, programs, and geostatic data to run the Weather Research Forecast Model (WRF-4.3) with the option to run 3DVAR & 4DVAR observational data. Script assumes a clean directory with no other WRF configure files in the directory.
 
@@ -22,7 +22,7 @@ Download and install required library and data files for WRF.
 
 Tested in Ubuntu
 
-Built in 34-bit system
+Built in 32-bit system
 
 Tested with current available libraries on 05/25/2021
 
