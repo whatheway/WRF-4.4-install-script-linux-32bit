@@ -223,7 +223,6 @@ cd $HOME/WRF/WRF-4.3
 export WRF_DIR=$HOME/WRF/WRF-4.3
 
 
-
 ############################WPSV4.3#####################################
 ## WPS v4.3
 ## Downloaded from git tagged releases
@@ -231,10 +230,12 @@ export WRF_DIR=$HOME/WRF/WRF-4.3
 ########################################################################
 cd $HOME/WRF/Downloads
 wget -c https://github.com/wrf-model/WPS/archive/v4.3.tar.gz
-tar -xvzf v4.3.tar.gz -C $HOME/WRF
+mkdir $HOME/WRF/WPS-4.3
+tar -xvzf v4.3.tar.gz -C $HOME/WRF/WPS-4.3
 cd $HOME/WRF/WPS-4.3
 ./configure #Option 3 for gfortran and distributed memory 
 ./compile
+
 
 
 
