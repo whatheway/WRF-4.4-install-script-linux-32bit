@@ -251,7 +251,7 @@ cd $HOME/WRF/WPS-4.3
 #Option 18 for gfortran/gcc and distribunted memory 
 ########################################################################
 cd $HOME/WRF/Downloads
-tar -xvzf v4.3.tar.gz -C $HOME/WRF/WRFPLUS
+tar -xvzf WRF-4.3.tar.gz -C $HOME/WRF/WRFPLUS
 cd $HOME/WRF/WRFPLUS/WRF-4.3
 mv * $HOME/WRF/WRFPLUS
 cd $HOME/WRF/WRFPLUS
@@ -275,7 +275,7 @@ export WRFPLUS_DIR=$HOME/WRF/WRFPLUS
 #Option 18 for gfortran/gcc and distribunted memory 
 ########################################################################
 cd $HOME/WRF/Downloads
-tar -xvzf v4.3.tar.gz -C $HOME/WRF/WRFDA
+tar -xvzf WRF-4.3.tar.gz -C $HOME/WRF/WRFDA
 cd $HOME/WRF/WRFDA/WRF-4.3
 mv * $HOME/WRF/WRFDA
 cd $HOME/WRF/WRFDA
@@ -286,6 +286,7 @@ export LD_LIBRARY_PATH=$DIR/grib2/lib:$LD_LIBRARY_PATH
 export WRFPLUS_DIR=$HOME/WRF/WRFPLUS
 ./configure 4dvar #Option 18 for gfortran/gcc and distribunted memory 
 ./compile all_wrfvar
+
 
 
 
