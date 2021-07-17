@@ -20,7 +20,7 @@ I have provided comments on what the script is doing and information on configur
 
 Download and install required library and data files for WRF.
 
-Tested in Ubuntu
+Tested in Ubuntu 20.04.2 LTS
 
 Built in 32-bit system
 
