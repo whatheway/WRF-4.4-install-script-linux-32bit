@@ -2,7 +2,7 @@
 
 ## WRF installation with parallel process.
 # Download and install required library and data files for WRF.
-# Tested in Ubuntu 
+# Tested in Ubuntu 20.04.2
 # Built in 32-bit system
 # Tested with current available libraries on 05/25/2021
 # If newer libraries exist edit script paths for changes
