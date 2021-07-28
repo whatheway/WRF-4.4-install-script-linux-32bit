@@ -14,7 +14,7 @@ This is a script that installs all the libararies, software, programs, and geost
 
 > chmod +x METplus_self_install_script_Linux_32bit.sh
 
-> ./WRF_ARW_INSTALL
+> ./WRF_ARW_INSTALL_32BIT
 > 
 # Please make sure to read the WRF_ARW_INSTALL.sh script before installing.
 
