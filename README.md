@@ -35,3 +35,5 @@ If newer libraries exist edit script paths for changes
 
 # Estimated Run Time ~ 80 - 150 Minutes
 ### Special thanks to Youtube's meteoadriatic and GitHub user jamal919
+
+Hatheway, W. (2022). WRFCHEM 4.3.3 Install Script linux 32bit (Version 4.3.3) [Computer software]
