@@ -1,39 +1,64 @@
-# WRF-4.3-install-script-32bit
+# WRF-4.4-install-script-32bit
 
-This is a script that installs all the libararies, software, programs, and geostatic data to run the Weather Research Forecast Model (WRF-4.3.3) with the option to run 3DVAR & 4DVAR observational data. Script assumes a clean directory with no other WRF configure files in the directory.
+This is a script that installs all the libararies, software, programs, and geostatic data to run the Weather Research Forecast Model (WRF-4.4) with the option to run 3DVAR & 4DVAR observational data. 
+Script assumes a clean directory with no other WRF configure files in the directory.
+**This script does not install NETCDF4 to write compressed NetCDF4 files in parallel**
 
-# Installation
+# Installation(
+Make sure to download folder into your Home Directory): $HOME
 
-(Make sure to download folder into your Home Directory):
+> git clone https://github.com/whatheway/WRF-4.4-install-script-linux-32bit.git
 
-> git clone https://github.com/whatheway/WRF-4.3.3-install-script-linux-32bit.git
+> cd $HOME/WRF-4.4-install-script-linux-32bit
 
-> chmod +x WRF_ARW_INSTALL.sh
+> chmod 775 WRF_ARW_INSTALL_32bit.sh
 
-> chmod +x MET_self_install_script_Linux_32bit.sh
+> chmod 775 MET_self_install_script_Linux_32bit.sh
 
-> chmod +x METplus_self_install_script_Linux_32bit.sh
+> chmod 775 METplus_self_install_script_Linux_32bit.sh
+
+> chmod 775 Miniconda3_Install.sh
 
 > ./WRF_ARW_INSTALL_32bit.sh
-> 
-# Please make sure to read the WRF_ARW_INSTALL.sh script before installing.
 
+
+# Please make sure to read the WRF_ARW_INSTALL.sh script before installing.  
 I have provided comments on what the script is doing and information on configuration files.
 
-# WRF installation with parallel process.
-## Must be installed with GNU compiler, it will not work with other compilers.
 
-Download and install required library and data files for WRF.
+# WRF installation with parallel process (dmpar).
+Must be installed with GNU compiler, it will not work with other compilers.
 
-Tested in Ubuntu 20.04.4 LTS
 
-Built in 32-bit system
+- Tested in Ubuntu 20.04.4 LTS.
+- Built in 32-bit system.
+- Tested with current available libraries on 05/10/2022, execptions have been noted in the script documentation. 
+- If newer libraries exist edit script paths for changes in future.
 
-Tested with current available libraries on 04/25/2024, execptions have been noted in script documentation. 
+# Post-Processing Software Included
+## UPP v4.1
+User Guide: https://dtcenter.org/sites/default/files/community-code/upp-users-guide-v4.1.pdf
+## ARWpost v3.1
+Added to $PATH and ~/.bashrc for easy access
+## Model Evaluation Tools (MET) & Model Evaluation Tools Plus (MET Plus)
+Added to $PATH and ~./bashrc for easy access
+Users Guide (MET): https://met.readthedocs.io/en/main_v10.1/Users_Guide/index.html
+Users Guide (MET Plus): https://metplus.readthedocs.io/en/v4.1.1/Users_Guide/index.html
+## OpenGRADS v.2.2.1
+Added to $PATH and ~/.bashrc for easy access
+Users Guide: http://www.opengrads.org/manual/
+## NCAR COMMAND LANGUAGE (NCL) v.6.6.2
+ Installed via CONDA package using miniconda3
+ Conda environment ncl_stable
+ Users Guide: https://www.ncl.ucar.edu/Document/Manuals/NCL_User_Guide/
+## WRF Python
+ Installed via CONDA package using miniconda3
+ Conda environment wrf-python
+Users Guide: https://wrf-python.readthedocs.io/en/latest/index.html
 
-If newer libraries exist edit script paths for changes
+## WRFPortal & WRFDomainWizard
+User Guide: https://esrl.noaa.gov/gsd/wrfportal/
 
-# Estimated Run Time ~ 80 - 150 Minutes
-### Special thanks to Youtube's meteoadriatic and GitHub user jamal919
 
-Hatheway, W. (2022). WRFCHEM 4.3.3 Install Script linux 32bit (Version 4.3.3) [Computer software]
+# Estimated Run Time ~ 90 - 150 Minutes @ 10mbps download speed.
+### - Special thanks to  Youtube's meteoadriatic, GitHub user jamal919, University of Manchester's  Doug L, University of Tunis El Manar's Hosni S.
