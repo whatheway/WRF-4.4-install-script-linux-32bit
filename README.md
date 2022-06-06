@@ -17,7 +17,7 @@ Make sure to download folder into your Home Directory): $HOME
 
 > chmod 775 METplus_self_install_script_Linux_32bit.sh
 
-> chmod 775 Miniconda3_Install.sh
+> chmod 775 Miniconda3_WRF_Install.sh
 
 > ./WRF_ARW_INSTALL_32bit.sh
 
